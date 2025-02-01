@@ -1,0 +1,348 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+
+.body {
+    color: #000000;
+}
+
+.js-ani {
+    overflow: hidden;
+}
+
+#changingword {
+    position: absolute;
+}
+
+.btn-p {
+    background: #d2ff28;
+    color: #000000;
+    border: 2px solid #d2ff28;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: 1s all ease-in-out;
+}
+
+.btn-p:hover {
+    border: 2px solid #d2ff28;
+    color: #000000;
+}
+
+.btn-p:hover::after {
+    transition: all 0.5s ease-out;
+    transform: scale(1, 1);
+}
+
+.btn-p::after {
+    content: "";
+    background: white;
+    position: absolute;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    left: -50%;
+    right: -50%;
+    top: -150%;
+    bottom: -150%;
+    line-height: 8.34em;
+    transform: scale(0, 0);
+}
+
+/* ============================================================ */
+
+/* navbar css */
+
+.navbar-bars {
+    color: #000000;
+}
+
+.fixed-top {
+    top: -40px;
+    transform: translateY(40px);
+    transition: transform .5s;
+    box-shadow: 0px 5px 20px rgb(138, 138, 138);
+}
+
+
+.bars {
+    text-decoration: none;
+    color: #000000;
+    transition: 0.3s all ease-out;
+}
+
+.bars:hover {
+    color: #000000;
+    background-color: #d2ff28;
+}
+
+.fa-mobile-screen {
+    color: #000000;
+    transition: 0.4s all ease-out;
+}
+
+.phone-icon:hover .fa-mobile-screen {
+    background-color: #d2ff28;
+    animation: mobile 0.3s linear 2;
+}
+
+@keyframes mobile {
+    0% {
+        transform: rotate(10deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+.bg-p {
+    background-color: #08323c;
+    color: white;
+}
+
+/* ============================================================ */
+
+/* Services Sec 2 Css */
+
+.card-hover-effect {
+
+    position: relative;
+    transition: transform 0.1s ease;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.card-hover-effect::before {
+    content: "";
+    position: absolute;
+
+}
+
+.f-list ul li::marker {
+    color: #d2ff28;
+}
+
+/* ============================================================ */
+
+/* Featured Work Sec 6 Css */
+
+.card-1 {
+    transition: all 1s ease-in-out;
+    /* cursor: url('https://res.cloudinary.com/dvkugaw3b/image/upload/v1641562028/cursor_ad12rf.png'), auto; */
+    
+    cursor: url('/assets/cursor.png') , auto ;
+    }
+
+.img-video {
+    overflow: hidden;
+    height: 600px;
+    transition: all 1s ease-in-out;
+}
+
+.card-img-1 {
+    display: block;
+    transition: all 1s ease-in-out;
+}
+
+.video-1 {
+    display: none;
+
+}
+
+.card-1:hover .video-1 {
+    display: block;
+}
+
+.card-1:hover .card-img-1 {
+    display: none;
+}
+
+
+.h-card-3 {
+    margin-top: -50px;
+}
+
+@media screen and (max-width:992px) {
+    .img-video {
+        height: 400px;
+    }
+
+}
+
+@media screen and (max-width:767px) {
+    .h-card-3 {
+        margin-top: 60px;
+    }
+
+    .img-video {
+        height: 500px;
+    }
+
+}
+
+/* ============================================================ */
+.arrow {
+    background-color: white;
+    border: 1px solid black;
+    transition: 1s all ease-in-out;
+}
+
+.arrow:hover {
+    transform: scale(1.1);
+}
+
+/* ============================================================ */
+
+
+/* Footer  Css */
+.footer-list li {
+    list-style: none;
+    display: inline;
+    transition: 1s all ease-in-out;
+    border-bottom: 2px solid #08323c;
+}
+
+.footer-list li:hover {
+    list-style: none;
+    display: inline;
+    border-bottom: 2px solid #d2ff28
+}
+
+.footer-clip {
+    clip-path: polygon(0% 0%, 100% 0%, 90% 50%, 100% 100%, 0% 100%);
+}
+
+@media screen and (max-width:768px) {
+    .footer-clip {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 52.4% 92.5%, 0% 100%);
+    }
+}
+
+.footer-icons a {
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+    background-color: rgb(216, 216, 216);
+    border-radius: 50%;
+    transition: 0.3s all ease-in-out;
+}
+
+.footer-icons a:hover {
+    transform: scale(1.1);
+    background-color: #d2ff28;
+}
+
+.footer-list-icon a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer-list-icon li {
+    list-style-type: none;
+}
+
+.fa-life-ring,
+.fa-mobile-screen,
+.fa-envelope {
+    transition: 1s all ease-in-out;
+    font-size: large;
+}
+
+.footer-list-icon a:hover .fa-envelope {
+    background-color: #d2ff28;
+}
+
+.footer-list-icon a:hover .fa-life-ring {
+    transform: rotate(360deg);
+    background-color: #d2ff28;
+}
+
+.footer-list-icon a:hover .fa-mobile-screen {
+    background-color: #d2ff28;
+}
+
+/* ============================================================ */
+
+/* Modal css */
+
+.bars2 {
+    text-decoration: none;
+    color: #000000;
+}
+
+.bars2:hover {
+    color: #08323c;
+}
+
+.modalclose {
+    color: white;
+    transition: 1s all ease-in-out;
+}
+
+.modalclose:hover {
+    color: #d2ff28;
+}
+
+.modal-link {
+    transition: 0.6s all ease-out;
+    clip-path: polygon(0% 100%, 8.1% 0.3%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.modal-link:hover {
+    background-color: #d2ff28;
+    color: #000000;
+    clip-path: polygon(0% 100%, 8.1% 0.3%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.modal-list-icon .fa-envelope {
+    z-index: 1;
+}
+
+.modal-list-icon a:hover .fa-envelope {
+    transform: rotateX('40deg');
+    /* transform: scale(1.2); */
+}
+
+.modal-list-icon a:hover .fa-life-ring {
+    transform: rotate(360deg);
+}
+
+.Home-8-Sec img{
+    transition: 0.3s ease-out;
+}
+.Home-8-Sec img:hover {
+    transform: scale(1.1);
+}
+.Home-9-Sec img{
+    transition: 0.3s ease-out;
+}
+.Home-9-Sec img:hover {
+    transform: scale(1.1);
+}
+.Home-10-Sec img{
+    transition: 0.3s ease-out;
+}
+.Home-10-Sec img:hover {
+    transform: scale(1.1);
+}
